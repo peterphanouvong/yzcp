@@ -1,0 +1,48 @@
+.home {
+  // @extend %cover;
+  background-color: $color-hillary;
+
+  transition: 0.4s ease;
+}
+
+.home__album__titles {
+  padding-top: 40rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home__album__title {
+  @extend %display-1;
+  margin: 5rem 15rem;
+  text-transform: lowercase;
+}
+
+.home__album__title__link {
+  color: $color-white;
+  display: block;
+  opacity: 0.6;
+
+  transition: 0.4s ease;
+
+  &:hover {
+    opacity: 1;
+    transition: 0.4s ease;
+  }
+}
+
+.home__album__images {
+  // position: absolute;
+}
+
+.home__album__media {
+  height: 64rem;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48rem;
+}
+
+.home__album__image {
+  @extend %cover;
+}

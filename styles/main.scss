@@ -1,0 +1,14 @@
+@import "./utils/variables.scss";
+@import "./utils/functions.scss";
+@import "./utils/mixins.scss";
+@import "./utils/vendors.scss";
+@import "./utils/responsive.scss";
+
+@import "./shared/typography.scss";
+@import "./base/reset.scss";
+@import "./base/base.scss";
+
+@import "./pages/home.scss";
+@import "./pages/album.scss";
+
+@import "./partials/preloader.scss";

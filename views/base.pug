@@ -1,0 +1,25 @@
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    base(href="/")
+
+    title YZC Photography
+
+    meta(name="description" content="photog")
+    link(href="main.css" rel="stylesheet")
+
+  body
+    include ./partials/preloader
+    //- include ./partials/navigation
+    div.noise
+    .content#content(data-template=template, data-barba="wrapper")
+      block content
+    .transition-element
+    
+
+    script(src="index.js")

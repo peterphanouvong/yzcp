@@ -1,0 +1,16 @@
+extends ../base.pug
+
+block variables
+  - var template = "home"
+
+block content
+  .home(data-barba="container" data-barba-namespace="home")
+    .home__album__images 
+        each album in home.data.albums
+          figure.home__album__media(data-id=album.album.id)
+            img.home__album__image(src=album.image.url)
+    ul.home__album__titles
+      each album in home.data.albums
+        li.home__album__title
+          a.home__album__title__link(href=`album/${album.album.uid}`, data-color=album.album.data.color, data-id=album.album.id)=album.album.data.title
+    

@@ -1,0 +1,24 @@
+extends ../base.pug
+
+block variables
+  - var template = "album"
+
+block content
+  .album(data-barba="container" data-barba-namespace="album")
+    .album__content
+      h1.album__content__title=album.data.title
+      p.album__content__description=album.data.description
+    .album__gallery 
+      .album__gallery__column
+        each item in album.data.gallery
+          figure.album__gallery__media 
+            img.album__gallery__image(src=item.image.url)
+      .album__gallery__column
+        each item in album.data.gallery
+          figure.album__gallery__media 
+            img.album__gallery__image(src=item.image.url)
+      .album__gallery__column
+        each item in album.data.gallery
+          figure.album__gallery__media 
+            img.album__gallery__image(src=item.image.url)
+    

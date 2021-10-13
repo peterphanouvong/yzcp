@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+img.album__gallery__image, .album, .home__album__image, .content, body, html {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.dg.ac {
+  z-index: 99999 !important;
+}
+
+h1.album__content__title, .home__album__title {
+  font-family: "Playfair Display", serif;
+  font-size: 16rem;
+}
+
+.album__content {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-size: 0.5208333333vw;
+  position: fixed;
+}
+@media (min-width: 1921px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 1.3333333333vw;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+img {
+  vertical-align: middle;
+}
+img.loaded {
+  opacity: 1;
+}
+
+.content::after {
+  animation: grain 16s steps(10) infinite;
+  content: "";
+  background-image: url("/textured_paper_@2X.affba394.png");
+  height: 300%;
+  width: 300%;
+  opacity: 0.2;
+  position: fixed;
+  top: -110%;
+  left: -150%;
+}
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+[data-animation=title] span,
+[data-animation=paragraph] span {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+canvas {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+
+.transition-element {
+  background-color: wheat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transform: translateY(100%);
+}
+
+.home {
+  background-color: #aca889;
+  transition: 0.4s ease;
+}
+
+.home__album__titles {
+  padding-top: 40rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home__album__title {
+  margin: 5rem 15rem;
+  text-transform: lowercase;
+}
+
+.home__album__title__link {
+  color: #fff;
+  display: block;
+  opacity: 0.6;
+  transition: 0.4s ease;
+}
+.home__album__title__link:hover {
+  opacity: 1;
+  transition: 0.4s ease;
+}
+
+.home__album__media {
+  height: 64rem;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48rem;
+}
+
+.album__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.album__gallery__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.album__gallery__column:nth-of-type(2) {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+figure.album__gallery__media {
+  position: relative;
+  width: 40rem;
+  height: 60rem;
+  z-index: 1;
+  margin-bottom: 10rem;
+}
+
+.preloader {
+  display: none;
+}
+
+/*# sourceMappingURL=/main.css.map */
